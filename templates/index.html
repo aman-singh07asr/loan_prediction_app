@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Loan Prediction Form</h2>
+        <form action="/predict" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="occupation" placeholder="Occupation" required>
+            <input type="number" name="income" placeholder="Annual Income (IND)" required>
+            <input type="number" name="age" placeholder="Age" required>
+            <input type="number" name="loan_amount" placeholder="Loan Amount (IND)" required>
+            <input type="number" name="loan_term" placeholder="Loan Term (Months)" required>
+            <input type="number" name="credit_score" placeholder="Credit Score (300–850)" required>
+            <select name="employment_type" required>
+                <option value="">Select Employment Type</option>
+                <option value="Salaried">Salaried</option>
+                <option value="Self-Employed">Self-Employed</option>
+                <option value="Unemployed">Unemployed</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
